@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('fascolor_shop', 'root', 'password', {
-  host: 'localhost',
+const sequelize = new Sequelize('freedb_fascolor', 'freedb_vinh-fascolor', 'qu#3&$n4EfwDZvs', {
+  host: 'sql.freedb.tech',
   dialect:'mysql' ,
   logging: false
 });
