@@ -9,6 +9,7 @@ class Orders {
     const data = req.body;
     const order = new Order(data)
    await order.save();
+   console.log(data);
    res.status(200).json(data);
    }
    catch (err) {
