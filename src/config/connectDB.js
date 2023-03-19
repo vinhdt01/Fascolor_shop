@@ -1,7 +1,13 @@
 const { Sequelize } = require('sequelize');
+require('dotenv').config();
 
-const sequelize = new Sequelize('freedb_fascolor', 'freedb_vinh-fascolor', 'qu#3&$n4EfwDZvs', {
-  host: 'sql.freedb.tech',
+// const sequelize = new Sequelize('fascolor_shop', 'root', 'password', {
+//   host: '127.0.0.1',
+//   dialect:'mysql' ,
+//   logging: false
+// });
+const sequelize = new Sequelize(process.env.DB_DATABASE_NAME, process.env.DB_USERNAME,process.env.DB_PASSWORD , {
+  host: process.env.DB_HOST,
   dialect:'mysql' ,
   logging: false
 });
