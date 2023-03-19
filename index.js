@@ -6,6 +6,7 @@ const router = require('./src/router/index.router')
 const app = express()
 const connectDB = require('./src/config/connectDB')
 const handlebars = require('express-handlebars');
+const mongoose = require("mongoose");
 const port = 3000
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,8 +23,11 @@ app.engine(
 );
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
-connectDB()
+// connectDB()
 router(app)
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+mongoose.connect(process.env.URL_MONGOOESE).then(() => {
+  console.log("connect to Db successfully");
+  app.listen(port, () => {
+    console.log(`listening on ${port}`);
+  });
+});

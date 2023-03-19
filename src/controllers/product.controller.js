@@ -1,7 +1,7 @@
 const db = require('../models/index.js') 
 const CRUDservice = require('../services/CRUDservice')
 const query = new CRUDservice;
-class Product {
+class Products {
  async   getProduct (req, res) {
         try {        
          let data =  await  query.getProductservice()
@@ -42,4 +42,4 @@ class Product {
 }
 
 
-module.exports = Product
+module.exports = Products
