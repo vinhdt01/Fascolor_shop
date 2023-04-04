@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
   {
+    orderId:{
+      type:"string",
+      require:true
+    },
     gender: {
         type: "boolean",
         required: true,
