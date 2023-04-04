@@ -1,5 +1,5 @@
 const Order = require("../../models/mongoose/order.js");
-const v4 = require("uuid");
+const { v4: uuidv4 } = require('uuid');
 
 class Orders {
  
@@ -8,7 +8,7 @@ class Orders {
    try {
     console.log(req.body)
     const data = req.body;
-    data.orderId = v4()
+    data.orderId = uuidv4()
     const order = new Order(data)
    await order.save();
    console.log(data);
