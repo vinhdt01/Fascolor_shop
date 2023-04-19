@@ -7,6 +7,18 @@ const schema = new Schema(
       type:"string",
       require:true
     },
+    paymentStatus:{
+      type:"string",
+      required: false,
+      default: 'initial'
+
+    },
+    paymentMethod:{
+      type:"string",
+      required: false,
+      default: 'unknowed'
+
+    },
     gender: {
         type: "boolean",
         required: true,
@@ -49,6 +61,8 @@ const schema = new Schema(
   },
   {
     timestamps: true,
+    paymentStatus: true,
+    paymentMethod: true
   }
 );
 

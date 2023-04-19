@@ -33,10 +33,10 @@ createProductView (req, res) {
  async createProduct (req, res) {
     try {
         console.log(req.body);
-    //     const data = req.body;
-    //     const product = new Product(data)
-    //    await product.save();
-    //    res.status(200).json(data);
+        const data = req.body;
+        const product = new Product(data)
+       await product.save();
+       res.status(200).json(data);
     res.status(200).json({'dsad':'dasd'});
        }
        catch (err) {

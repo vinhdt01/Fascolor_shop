@@ -15,6 +15,10 @@ const schema = new Schema(
       type: "string",
       required: true,
     },
+    description: {
+      type: "string",
+      required: true,
+    },
     main_photoURL: {
       type: "string",
       required: true,
