@@ -12,16 +12,9 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('views'));
-app.engine(
-  'hbs',
-  handlebars({
-      extname: '.hbs',
-      helpers: {
-          sum: (a, b) => a + b,
-      },
-  }),
-);
-app.set('view engine', 'hbs');
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
+
 app.set('views', path.join(__dirname, 'resources', 'views'));
 // connectDB()
 router(app)

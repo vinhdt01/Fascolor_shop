@@ -6,6 +6,8 @@ const router = express.Router();
 const order = new Orders;    
 
 router.get('/getorder/:slug' , order.getOrder)
+router.get('/getorder' , order.getAllOrder)
+
 router.post('/create-order' , order.createOrder)
 router.put('/update-payment' , order.updateOrderPayment)
 

@@ -67,6 +67,22 @@ catch(err) {
 }
 
 }
+async getAllOrder(req, res) {
+  try {
+   Order.find()
+   .then(data => {
+    data = data.map(value => value.toObject())
+    res.render('order' , {data})
+
+   })
+ 
+  }
+  catch(err) {
+    res.status(200).json({'success': false})
+  
+  }
+  
+  }
 }
 
 

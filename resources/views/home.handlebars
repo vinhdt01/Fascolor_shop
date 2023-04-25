@@ -1,0 +1,45 @@
+ {{!-- <form method="POST" action="/create-product">
+    <input name="name" type="text" placeholder="name">
+
+    <input name="price" type="text" placeholder="price">
+  <input name="net_price" type="text"  placeholder="net_price">
+<input name="main_photoURL" type="text" placeholder="main_photoURL">
+<input name="sub_photoURL" type="text"  placeholder="sub_photoURL">
+
+<input name="description" type="text"  placeholder="description">
+
+  <input type="submit">
+
+</form> --}}
+
+
+<form class="mx-5" method="POST" action="/create-product">
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Tên sản phẩm</label>
+  <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Sản phẩm A">
+</div>
+<div class="mb-3">
+  <label for="price" class="form-label">Price</label>
+  <input type="text" name="price" class="form-control" id="price" placeholder="200000">
+</div>
+
+<div class="mb-3">
+  <label for="net_price" class="form-label">Net Price</label>
+  <input type="text" name="net_price" class="form-control" id="net_price" placeholder="200000">
+</div>
+<div class="mb-3">
+  <label for="main_photoURL" class="form-label">Main Photo</label>
+  <input type="text" name="main_photoURL" class="form-control" id="main_photoURL" placeholder="Nhập link cdn hình hình">
+</div>
+
+
+<div class="mb-3">
+  <label for="sub_photoURL" class="form-label">Hình phụ</label>
+  <input type="text" name="sub_photoURL" class="form-control" id="sub_photoURL" placeholder="Nhập link cdn hình phụ mỗi link cách nhau dấu phẩy">
+</div>
+<div class="mb-3">
+  <label for="description" class="form-label">Mô tả về sản phẩm</label>
+  <input type="text" name="description" class="form-control" id="description" placeholder="Mô tả về sản phẩm">
+</div>
+    <button type="submit" class="btn btn-primary mb-3">{{data}}</button>
+  </form>
