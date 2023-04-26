@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     province:DataTypes.STRING,
     ward:DataTypes.STRING,
     address:DataTypes.STRING,
+    base_amount:Datatypes.STRING,
     district:DataTypes.STRING,
     items:DataTypes.STRING,
     note:DataTypes.STRING,

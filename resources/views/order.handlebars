@@ -36,7 +36,8 @@
     <th>{{@key}}</th>
     <td>{{this.name}}</td>
         <td>{{this.paymentMethod}}</td>
-        <td>{{{this.createdAt "YYYY" timeStamp}}}</td>
+        {{!-- <td>{{{this.createdAt "YYYY" timeStamp}}}</td> --}}
+  <td>{{{increasePrice this.createdAts}}}</td>
 
     <td>{{this.paymentStatus}}</td>
 
