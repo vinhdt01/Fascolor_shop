@@ -15,6 +15,22 @@ app.use(bodyParser.json());
 app.use(express.static('views'));
 var now = moment()
 var hbs = handlebars.create({})
+
+
+const price = 1234567;
+
+
+
+hbs.handlebars.registerHelper('currencyPrice', function(price) {
+// Create a moment object from the date
+  const formatter = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND'
+  });
+ return formatter.format(price); // "1.234.567 ₫"
+
+})
+
 hbs.handlebars.registerHelper('increasePrice', function(dateFromMongoDB) {
 // Create a moment object from the date
 const momentDate = moment(dateFromMongoDB);

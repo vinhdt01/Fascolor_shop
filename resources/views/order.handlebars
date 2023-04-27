@@ -7,6 +7,7 @@
       <th scope="col">Tên</th>
       <th scope="col">Phương thức thanh toán</th>
         <th scope="col">Ngày đặt</th>
+        <th scope="col"></th>
 
       <th scope="col">Trạng thái</th>
     </tr>
@@ -32,13 +33,12 @@
     </tr> --}}
 
    {{#each data}}
-   <tr>
+   <tr style="cursor:pointer">
     <th>{{@key}}</th>
     <td>{{this.name}}</td>
         <td>{{this.paymentMethod}}</td>
-        {{!-- <td>{{{this.createdAt "YYYY" timeStamp}}}</td> --}}
   <td>{{{increasePrice this.createdAts}}}</td>
-
+   <td>{{{currencyPrice this.base_amount}}}<td/>
     <td>{{this.paymentStatus}}</td>
 
    </tr>

@@ -59,7 +59,11 @@ async getOrder(req, res) {
 try {
   console.log(req.params.slug)
   const data = await Order.findById(req.params.slug)
-  res.status(200).json({'success': true , data})
+  // res.status(200).json({'success': true , data})
+    let value = data.items
+    console.log(JSON.parse(value) , 'value')
+    res.render('orderdetail' , {data:JSON.parse(value) , status:data.paymentStatus , method:data.paymentMethod})
+
 }
 catch(err) {
   res.status(200).json({'success': false})

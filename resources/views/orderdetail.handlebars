@@ -1,0 +1,27 @@
+
+<div class="container-fluid mt-5">
+<div>
+  <span>Status Payment :</span>
+  <span>{{{status}}}</span>
+  <span href="#" class="btn btn-primary" style="cursor:pointer  ">Success</span>
+    <span href="#" class="btn btn-primary" style="cursor:pointer  ">Check</span>
+  <span href="#" class="btn btn-primary" style="cursor:pointer  ">Decline</span>
+
+</div>
+<div class="d-flex m-2">
+{{#each data}}
+<div class="card" style="width: 18rem;" style="margin: 10px">
+  <img src={{{this.image}}} class="card-img-top mr-3" alt="..." style="height: 300px;">
+  <div class="card-body">
+    <p class="card-text">{{{currencyPrice this.price}}}</p>
+    <a href="#" class="btn btn-primary">Sửa</a>
+  </div>
+</div>
+{{/each}}
+</div>
+
+
+</div>
+
+
+
