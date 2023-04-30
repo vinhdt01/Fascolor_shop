@@ -9,6 +9,8 @@ router.get('/product' , product.getProduct)
 router.get('/get-product/:slug' , product.getOneProduct)
 router.get('/create-product' , product.createProductView)
 router.post('/create-product' , product.createProduct)
+router.post('/search' , product.searchProduct)
+
 
 
 

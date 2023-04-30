@@ -37,13 +37,29 @@ createProductView (req, res) {
         const product = new Product(data)
        await product.save();
        res.status(200).json(data);
-    res.status(200).json({'dsad':'dasd'});
        }
        catch (err) {
         res.status(500).json(err);
        }
     
      }
+
+
+     async searchProduct (req, res) {
+      try {
+        let searchTerm = req.body.name
+        const regex = new RegExp(`.*${searchTerm}.*`, 'i');
+
+        const product = await Product.find({name: { $regex: regex }}).exec();
+        console.log('tìm ra rồi nè' , product)
+
+      res.status(200).json({product:product});
+         }
+         catch (err) {
+          res.status(500).json(err);
+         }
+      
+       }
  
 }
 

@@ -54,7 +54,7 @@ const schema = new Schema(
       base_amount:{
         type: "string",
         required: true,
-      },
+      },  
       items: {
         type: "string",
         required: true,
