@@ -34,7 +34,8 @@
 
    {{#each data}}
    <tr style="cursor:pointer">
-    <th>{{@key}}</th>
+    <th>    <a href="getorder/{{this._id}}">{{@key}}</a>
+</th>
     <td>{{this.name}}</td>
         <td>{{this.paymentMethod}}</td>
   <td>{{{increasePrice this.createdAts}}}</td>
@@ -42,9 +43,7 @@
     <td>{{this.paymentStatus}}</td>
 
    </tr>
-   <tr>
-
-   </tr>
+   
   {{/each}}
   </tbody>
 </table>
