@@ -73,10 +73,19 @@ catch(err) {
 }
 async getAllOrder(req, res) {
   try {
+    let revenue = []
+    function getSum(total, num) {
+      return total + Math.round(num);
+    }
    Order.find()
    .then(data => {
+    let total = data
     data = data.map(value => value.toObject())
-    res.render('order' , {data})
+    total.map(value => {revenue.push(value.base_amount) })
+    console.log(revenue , 'revenue')
+       let tong =  revenue.reduce(getSum , 0)
+       console.log(tong , 'tong')
+    res.render('order' , {data , tong})
 
    })
  
