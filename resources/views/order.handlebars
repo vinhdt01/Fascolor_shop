@@ -7,7 +7,7 @@
       <th scope="col">Tên</th>
       <th scope="col">Phương thức thanh toán</th>
         <th scope="col">Ngày đặt</th>
-        <th scope="col"></th>
+        <th scope="col">Đơn giá</th>
 
       <th scope="col">Trạng thái</th>
     </tr>
@@ -21,7 +21,7 @@
 </th>
     <td>{{this.name}}</td>
         <td>{{this.paymentMethod}}</td>
-  <td>{{{increasePrice this.createdAts}}}</td>
+  <td>{{{increasePrice this.createdAt}}}</td>
    <td>{{{currencyPrice this.base_amount}}}<td/>
     <td>{{this.paymentStatus}}</td>
     
