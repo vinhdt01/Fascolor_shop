@@ -8,7 +8,10 @@ const connectDB = require('./src/config/connectDB')
 const handlebars = require('express-handlebars');
 const moment = require('moment')
 const mongoose = require("mongoose");
+var cookieParser = require('cookie-parser')
+
 const port = 3000
+app.use(cookieParser())
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
