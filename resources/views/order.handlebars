@@ -5,6 +5,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Tên</th>
+            <th scope="col">Số ĐT</th>
+
       <th scope="col">Phương thức thanh toán</th>
         <th scope="col">Ngày đặt</th>
         <th scope="col">Đơn giá</th>
@@ -20,6 +22,8 @@
     <th>    <a href="getorder/{{this._id}}">{{@key}}</a>
 </th>
     <td>{{this.name}}</td>
+        <td>{{this.phone}}</td>
+
         <td>{{this.paymentMethod}}</td>
   <td>{{{increasePrice this.createdAt}}}</td>
    <td>{{{currencyPrice this.base_amount}}}<td/>
