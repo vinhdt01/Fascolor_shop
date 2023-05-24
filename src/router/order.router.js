@@ -12,7 +12,7 @@ router.get('/getorders/:slug' , order.getOrders)
 
 router.get('/getorder' ,  au.verify , order.getAllOrder)
 
-router.post('/create-order' , au.verify , order.createOrder)
+router.post('/create-order'  , order.createOrder)
 router.put('/update-payment' , order.updateOrderPayment)
 router.post('/delete/:slug' , au.verify , order.deleteOrder)
 
