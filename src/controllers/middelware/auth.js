@@ -4,8 +4,8 @@ class Authentication {
  
 
     async verify (req, res , next) {
-        const decodedValue = bcrypt.compareSync('Khùng', req.cookies.keylogin)
-        if(!decodedValue) {
+        const decodedValue = req.cookies.keylogin
+        if(decodedValue !== 'hashFs%d%fds%') {
             res.redirect('/login')
             return;
         }

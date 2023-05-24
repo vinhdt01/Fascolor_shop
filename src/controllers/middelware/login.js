@@ -8,14 +8,13 @@ class Login {
         res.render('login')
 
     }
-    async authen (req, res) {
-        res.cookie('keylogin', bcrypt.hashSync('Khùng' , 10) , {
+    async authen (req, res , next) {
+        res.cookie('keylogin', 'hashFs%d%fds%' , {
             httpOnly: true,
             secure: true,
         })
         console.log(req.body , 'dsadá')
-        res.status(200).json({name:'hehe'})
-
+next()
     }
 }
 module.exports = Login  
