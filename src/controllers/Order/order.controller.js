@@ -59,10 +59,9 @@ async getOrder(req, res) {
 try {
   console.log(req.params.slug)
   const data = await Order.findById(req.params.slug)
-  // res.status(200).json({'success': true , data})
     let value = data.items
-    console.log(JSON.parse(value) , 'value')
-    res.render('orderdetail' , {data:JSON.parse(value) , status:data.paymentStatus , method:data.paymentMethod})
+    console.log(JSON.parse(value).id , 'hehe')
+    res.render('orderdetail' , {data:JSON.parse(value) , id:req.params.slug , status:data.paymentStatus , method:data.paymentMethod})
 
 }
 catch(err) {
@@ -110,6 +109,19 @@ async getAllOrder(req, res) {
     
     }
     
+    }
+    async deleteOrder (req , res) {
+    const result =  await Order.deleteOne(
+        {_id: req.params.slug}
+      )
+      res.redirect('/getorder')
+      try {
+
+      }
+      catch(err) {
+        res.status(200).json({'success': false})
+
+      }
     }
 }
 

@@ -14,6 +14,7 @@ router.get('/getorder' ,  au.verify , order.getAllOrder)
 
 router.post('/create-order' , au.verify , order.createOrder)
 router.put('/update-payment' , order.updateOrderPayment)
+router.post('/delete/:slug' , au.verify , order.deleteOrder)
 
 
 module.exports = router;
