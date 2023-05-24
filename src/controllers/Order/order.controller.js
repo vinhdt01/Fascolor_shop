@@ -98,10 +98,9 @@ async getAllOrder(req, res) {
   async getOrders(req, res) {
     try {
       console.log(req.params.slug)
-      const data = await Order.findById(req.params.slug)
+      const data = await Order.find({orderId:req.params.slug})
       // res.status(200).json({'success': true , data})
         let value = data.items
-        console.log(JSON.parse(value) , 'value')
         res.json({data:data})
     }
     catch(err) {
