@@ -122,6 +122,13 @@ async getAllOrder(req, res) {
 
       }
     }
+   async  trackingOrder (req , res) {
+       const data = await Order.find({phone:req.params.slug})
+       console.log(data)
+
+       res.status(200).json({'data': data})
+   }
+
 }
 
 

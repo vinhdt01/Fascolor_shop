@@ -9,6 +9,7 @@ const au = new Authetication;
 
 router.get('/getorder/:slug' , order.getOrder)
 router.get('/getorders/:slug' , order.getOrders)
+router.get('/tracking/:slug' , order.trackingOrder)
 
 router.get('/getorder' ,  au.verify , order.getAllOrder)
 
